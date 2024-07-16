@@ -66,16 +66,30 @@ main {
   color: white;
   font-weight: 900;
   font-size: 20px;
+  transition: color 0.5s;
+}
+.header__logo:hover {
+  color: rgb(201, 200, 255);
 }
 .header__lk {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+.header__lk:hover span {
+  color: rgb(201, 200, 255);
+}
+.header__lk:hover svg path {
+  fill: rgb(201, 200, 255);
+}
+.header__lk svg path {
+  transition: fill 0.5s;
+}
 .header__lk span {
   font-size: 16px;
   color: white;
   text-transform: uppercase;
+  transition: color 0.5s;
 }
 
 .menu__list {
@@ -101,14 +115,25 @@ main {
   visibility: visible;
   max-height: 300px;
 }
+.menu__item::before {
+  position: absolute;
+  bottom: -8px;
+  content: "";
+  display: block;
+  width: 0;
+  height: 1px;
+  background: rgb(201, 200, 255);
+  transition: 0.3s;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.menu__item:hover::before {
+  width: 100%;
+}
 .menu__link {
   color: white;
   text-transform: uppercase;
   transition: all 0.4s;
-  position: relative;
-}
-.menu__link::after {
-  position: absolute;
 }
 
 .sub-menu {
