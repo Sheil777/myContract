@@ -109,6 +109,9 @@ main {
     width: 100%;
     height: 100%;
     background-color: rgb(76, 72, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
 .menu__list {
@@ -190,6 +193,35 @@ main {
 }
 .menu__arrow path {
   transition: stroke 0.4s;
+}
+
+.menu-bottom-phone {
+  display: none;
+}
+@media (max-width: 768px) {
+  .menu-bottom-phone {
+    display: block;
+  }
+}
+.menu-bottom-phone__header {
+  text-align: center;
+  margin-bottom: 15px;
+}
+.menu-bottom-phone__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+.menu-bottom-phone__item:last-child {
+  margin-bottom: 30px;
+}
+.menu-bottom-phone__item img {
+  width: 20px;
+}
+.menu-bottom-phone__item a {
+  color: white;
 }
 
 .sub-menu {
