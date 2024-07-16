@@ -85,13 +85,30 @@ main {
 }
 .menu__item {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 .menu__item:has(.sub-menu)::after {
+  display: block;
   content: url("../images/icons/arrow-sub-menu.svg");
+  margin-top: -5px;
+  margin-left: 10px;
+}
+.menu__item:hover > a {
+  color: rgb(201, 200, 255);
+}
+.menu__item:hover .sub-menu {
+  visibility: visible;
+  max-height: 300px;
 }
 .menu__link {
   color: white;
   text-transform: uppercase;
+  transition: all 0.4s;
+  position: relative;
+}
+.menu__link::after {
+  position: absolute;
 }
 
 .sub-menu {
@@ -100,6 +117,8 @@ main {
   border-radius: 2px;
   overflow: hidden;
   width: 292px;
+  transition: all 0.5s;
+  max-height: 0;
 }
 .sub-menu__item {
   border-bottom: 1px solid rgb(201, 200, 255);
