@@ -546,6 +546,10 @@ main {
   border: 1px solid rgb(148, 148, 148);
   border-width: 1px 1px 0 0;
 }
+.field .choices__list--dropdown .choices__item--selectable.is-highlighted,
+.field .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background-color: rgb(201, 200, 255);
+}
 
 .many-field__header {
   background-color: rgb(36, 132, 251);
