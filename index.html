@@ -250,6 +250,112 @@
                         </div>
                     </div>
                 </section>
+                <section class="main__section">
+                    <h2>8. Техническое состояние автомобиля</h2>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="breakdowns" id="no-breakdowns">
+                            <label class="radio-button__label" for="no-breakdowns">Находится в исправном состоянии</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="breakdowns" id="yes-breakdowns">
+                            <label class="radio-button__label" for="yes-breakdowns">Имеется поломка (неисправность)</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="breakdowns" id="breakdowns-off">
+                            <label class="radio-button__label" for="breakdowns-off">Пункт не предусмотрен</label>
+                        </div>
+                    </div>
+                    <div class="main__many-fields">
+                        <div class="many-field__header">Неисправность</div>
+                        <div class="many-field__row many-field__row_one">
+                            <input type="text" placeholder="Опишите неисправность...">
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>9. Вместе с автомобилем продается прицеп или тому подобное?</h2>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="additionally" id="additionally-yes">
+                            <label class="radio-button__label" for="additionally-yes">Да</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="additionally" id="additionally-no">
+                            <label class="radio-button__label" for="additionally-no">Нет</label>
+                        </div>
+                    </div>
+                    <div class="main__many-fields">
+                        <div class="many-field__header">Одновременно с передачей автомобиля в собственность Покупателя Продавец передает в собственность следующее имущество</div>
+                        <div class="many-field__row many-field__row_one">
+                            <input type="text" placeholder="Опишите имущество...">
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>10. Автомобиль находится под залогом, арестом и т.д.?</h2>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="arrest" id="arrest-yes">
+                            <label class="radio-button__label" for="arrest-yes">Да</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="arrest" id="arrest-no">
+                            <label class="radio-button__label" for="arrest-no">Нет</label>
+                        </div>
+                    </div>
+                    <div class="main__many-fields">
+                        <div class="many-field__header">Автомобиль имеет следующее ограничение</div>
+                        <div class="many-field__row many-field__row_one">
+                            <input type="text" placeholder="Опишите ограничение...">
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>11. Способ оплаты стоимости автомобиля</h2>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="payment-bank">
+                            <label class="radio-button__label" for="payment-bank">Перевод на банковский счет</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="payment-cash">
+                            <label class="radio-button__label" for="payment-cash">Наличные денежные средства</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="payment-transfer">
+                            <label class="radio-button__label" for="payment-transfer">Перевод на банковскую карту</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="payment-transfer-on-check">
+                            <label class="radio-button__label" for="payment-transfer-on-check">Перевод на расчетный счет</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="choose-cust">
+                            <label class="radio-button__label" for="choose-cust">По выбору покупателя</label>
+                        </div>
+                        <div class="radio-button">
+                            <input type="radio" name="payment-method" id="choose-sel">
+                            <label class="radio-button__label" for="choose-sel">По выбору продавца</label>
+                        </div>
+                    </div>
+                    <div class="main__fields">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите номер расчётного счета...">
+                            <label for="">Расчётный счёт</label>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2 style="display: none;">Кнопка отправки</h2>
+                    <a class="main__submit" href="#">Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                </section>
             </div>
         </main>
         <footer class="footer">
