@@ -397,7 +397,7 @@ main {
   align-items: center;
   background-color: rgb(189, 218, 254);
   height: calc(100% - 2px);
-  width: 30px;
+  padding: 0 10px;
   z-index: 0;
 }
 .field__prompt + input {
@@ -590,6 +590,51 @@ main {
 .many-field__row_one input:focus, .many-field__row_one input:hover {
   margin-top: -1px;
   min-height: 51px;
+}
+
+.radio-button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex: 1 0 0;
+  border: 1px solid rgb(36, 132, 251);
+  box-sizing: border-box;
+  border-radius: 2px;
+  height: 50px;
+  padding: 0 30px;
+}
+.radio-button input {
+  display: none;
+}
+.radio-button input:checked + .radio-button__label::after {
+  transform: scale(1);
+}
+.radio-button label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgb(148, 148, 148);
+}
+.radio-button label::before, .radio-button label::after {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+.radio-button label::before {
+  border: 1px solid rgb(36, 132, 251);
+  cursor: pointer;
+}
+.radio-button label::after {
+  transform: scale(0);
+  display: block;
+  position: absolute;
+  top: 12px;
+  left: 30px;
+  border: 6px solid rgb(76, 72, 255);
+  transition: transform 0.3s;
 }
 
 /* ******************************* */
