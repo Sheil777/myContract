@@ -372,6 +372,9 @@ main {
   justify-content: space-between;
   gap: 20px;
 }
+.main__many-fields {
+  margin-top: 20px;
+}
 
 .field {
   display: flex;
@@ -382,7 +385,9 @@ main {
 }
 .field label {
   display: block;
+  min-height: 50px;
   padding: 14.5px 30px;
+  box-sizing: border-box;
   background-color: rgb(36, 132, 251);
   white-space: nowrap;
 }
@@ -399,6 +404,37 @@ main {
 }
 .field input:focus + label, .field input:hover + label {
   background-color: rgb(76, 72, 255);
+}
+
+.many-field__header {
+  background-color: rgb(36, 132, 251);
+  padding: 14.5px 30px;
+  text-align: center;
+  min-height: 50px;
+  box-sizing: border-box;
+}
+.many-field__row {
+  display: flex;
+}
+.many-field__row input {
+  font-size: 18px;
+  padding: 0 10px;
+  border: 1px solid rgb(36, 132, 251);
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 50px;
+  text-align: center;
+}
+.many-field__row input:focus, .many-field__row input:hover {
+  outline: none;
+  border: 1px solid rgb(76, 72, 255);
+}
+.many-field__row_one input {
+  border-top: none;
+}
+.many-field__row_one input:focus, .many-field__row_one input:hover {
+  margin-top: -1px;
+  min-height: 51px;
 }
 
 /* ******************************* */

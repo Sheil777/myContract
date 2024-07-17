@@ -317,6 +317,10 @@
     justify-content: space-between;
     gap: 20px;
   }
+
+  &__many-fields {
+    margin-top: 20px;
+  }
 }
 
 .field {
@@ -334,8 +338,9 @@
 
   label {
     display: block;
-    // height: 100%;
+    min-height: 50px;
     padding: 14.5px 30px;
+    box-sizing: border-box;
 
     background-color: rgb(36, 132, 251);
     white-space: nowrap;
@@ -356,6 +361,45 @@
 
     &:focus + label, &:hover + label {
       background-color: rgb(76, 72, 255);
+    }
+  }
+}
+
+.many-field {
+
+  &__header {
+    background-color: rgb(36, 132, 251);
+    padding: 14.5px 30px;
+    text-align: center;
+    min-height: 50px;
+    box-sizing: border-box;
+  }
+
+  &__row {
+    display: flex;
+
+    input {
+      font-size: 18px;
+      padding: 0 10px;
+      border: 1px solid rgb(36, 132, 251);
+      box-sizing: border-box;
+      width: 100%;
+      min-height: 50px;
+      text-align: center;
+
+      &:focus, &:hover {
+        outline: none;
+        border: 1px solid rgb(76, 72, 255);
+      }
+    }
+
+    &_one input {
+      border-top: none;
+
+      &:focus, &:hover {
+        margin-top: -1px;
+        min-height: 51px;
+      }
     }
   }
 }
