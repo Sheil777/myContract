@@ -1,3 +1,4 @@
+@import 'choices.min.css';
 * {
   margin: 0;
   padding: 0;
@@ -357,7 +358,7 @@ main {
   line-height: 38px;
 }
 .main__section {
-  padding: 20px 30px;
+  padding: 20px 30px 10px 30px;
   background-color: white;
 }
 .main__section h2 {
@@ -372,6 +373,9 @@ main {
   justify-content: space-between;
   gap: 20px;
 }
+.main__fields.mb20 {
+  margin-bottom: 20px;
+}
 .main__many-fields {
   margin-top: 20px;
 }
@@ -379,9 +383,57 @@ main {
 .field {
   display: flex;
   flex-direction: row-reverse;
+  position: relative;
   border-radius: 2px;
   flex: 1 0 0;
   flex-grow: 1;
+}
+.field__prompt {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(189, 218, 254);
+  height: calc(100% - 2px);
+  width: 30px;
+  z-index: 0;
+}
+.field__prompt + input {
+  padding-right: 40px !important;
+}
+.field.correctly label {
+  background-color: rgb(43, 159, 82);
+}
+.field.correctly input {
+  border: 1px solid rgb(43, 159, 82);
+  color: rgb(43, 159, 82);
+}
+.field.correctly input:hover {
+  border: 1px solid rgb(43, 159, 82);
+}
+.field.correctly input:hover + label {
+  background-color: rgb(43, 159, 82);
+}
+.field.wrong label {
+  background-color: rgb(251, 78, 78);
+}
+.field.wrong input {
+  border: 1px solid rgb(251, 78, 78);
+  color: rgb(251, 78, 78);
+}
+.field.wrong input:hover {
+  border: 1px solid rgb(251, 78, 78);
+}
+.field.wrong input:hover + label {
+  background-color: rgb(251, 78, 78);
+}
+.field.correctly input:focus, .field.wrong input:focus {
+  border: 1px solid rgb(76, 72, 255);
+}
+.field.correctly input:focus + label, .field.wrong input:focus + label {
+  background-color: rgb(76, 72, 255);
 }
 .field label {
   display: block;
@@ -402,8 +454,97 @@ main {
   outline: none;
   border: 1px solid rgb(76, 72, 255);
 }
+.field input:focus {
+  color: black;
+}
 .field input:focus + label, .field input:hover + label {
   background-color: rgb(76, 72, 255);
+}
+.field input::-moz-placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
+}
+.field input::placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
+}
+.field .choices {
+  width: 100%;
+  margin-bottom: 0;
+}
+.field .choices.is-focused .choices__inner, .field .choices.is-open .choices__inner {
+  border: 1px solid rgb(76, 72, 255);
+}
+.field .choices.is-focused + label, .field .choices.is-open + label {
+  background-color: rgb(76, 72, 255);
+}
+.field .choices__inner {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  font-size: 18px;
+  box-sizing: border-box;
+  min-height: 50px;
+  height: 100%;
+  border: 1px solid rgb(36, 132, 251);
+  border-radius: 0;
+}
+.field .choices__inner .choices__placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
+}
+.field .choices__placeholder {
+  opacity: 1;
+}
+.field .choices__list--dropdown {
+  box-sizing: border-box;
+}
+.field .choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+.field .choices__list--dropdown .choices__item {
+  border-bottom: 1px solid rgb(201, 200, 255);
+  border-right: 0;
+  border-left: 0;
+}
+.field .choices__list--dropdown .choices__item:last-child {
+  border-bottom: 0;
+}
+.field .choices__list--dropdown.is-active {
+  height: 119px;
+  overflow-y: auto;
+}
+.field .choices__list--dropdown.is-active::-webkit-scrollbar {
+  width: 10px;
+  background: white;
+}
+.field .choices__list--dropdown.is-active::-webkit-scrollbar-thumb {
+  background: rgb(36, 132, 251);
+}
+.field .choices__item {
+  color: black;
+  opacity: 1;
+  font-size: 18px !important;
+}
+.field .choices__list--dropdown .choices__item--selectable, .field .choices__list[aria-expanded] .choices__item--selectable {
+  padding-right: 10px;
+}
+.field .choices[data-type*=select-one]:after {
+  height: 8px;
+  width: 8px;
+  z-index: 3;
+  top: 40%;
+  border: 1px solid rgb(148, 148, 148);
+  border-width: 0 0 1px 1px;
+  transform: rotate(-45deg);
+}
+.field .choices[data-type*=select-one].is-open:after {
+  top: 60%;
+  border: 1px solid rgb(148, 148, 148);
+  border-width: 1px 1px 0 0;
 }
 
 .many-field__header {
@@ -428,6 +569,16 @@ main {
 .many-field__row input:focus, .many-field__row input:hover {
   outline: none;
   border: 1px solid rgb(76, 72, 255);
+}
+.many-field__row input::-moz-placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
+}
+.many-field__row input::placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
 }
 .many-field__row_one input {
   border-top: none;

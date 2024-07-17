@@ -1,3 +1,9 @@
+@mixin input-placeholder {
+  font-family: "Raleway", sans-serif;
+  color: rgb(148, 148, 148);
+  font-weight: 400;
+}
+
 .header {
   background-color: rgb(76, 72, 255);
   padding-top: 20px;
@@ -300,7 +306,7 @@
   }
 
   &__section {
-    padding: 20px 30px;
+    padding: 20px 30px 10px 30px;
     background-color: white;
 
     h2 {
@@ -316,6 +322,10 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+
+    &.mb20 {
+      margin-bottom: 20px;
+    }
   }
 
   &__many-fields {
@@ -326,15 +336,81 @@
 .field {
   display: flex;
   flex-direction: row-reverse;
-  // height: 50px;
+  position: relative;
   border-radius: 2px;
   flex: 1 0 0;
 
-  // &:first-child {
-  //   padding-right: 20px;
-  //   box-sizing: border-box;
-  // }
+  &__prompt {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgb(189, 218, 254);
+    height: calc(100% - 2px);
+    width: 30px;
+
+    z-index: 0;
+
+    & + input {
+      padding-right: 40px !important;
+    }
+  }
+
   flex-grow: 1;
+
+  &.correctly {
+    label {
+      background-color: rgb(43, 159, 82);
+    }
+
+    input {
+      border: 1px solid rgb(43, 159, 82);
+      color: rgb(43, 159, 82);
+
+      &:hover {
+        border: 1px solid rgb(43, 159, 82);
+      }
+
+      &:hover + label {
+        background-color: rgb(43, 159, 82);
+      }
+    }
+  }
+
+  &.wrong {
+    label {
+      background-color: rgb(251, 78, 78);
+    }
+
+    input {
+      border: 1px solid rgb(251, 78, 78);
+      color: rgb(251, 78, 78);
+
+      &:hover {
+        border: 1px solid rgb(251, 78, 78);
+      }
+
+      &:hover + label {
+        background-color: rgb(251, 78, 78);
+      }
+    }
+  }
+
+  &.correctly, &.wrong {
+    input {
+      &:focus {
+        border: 1px solid rgb(76, 72, 255);
+      }
+
+      &:focus + label {
+        background-color: rgb(76, 72, 255);
+      }
+    }
+  }
 
   label {
     display: block;
@@ -359,9 +435,115 @@
       border: 1px solid rgb(76, 72, 255);
     }
 
+    &:focus {
+      color: black;
+    }
+
     &:focus + label, &:hover + label {
       background-color: rgb(76, 72, 255);
     }
+
+    &::placeholder {
+      @include input-placeholder();
+    }
+  }
+
+  .choices {
+    width: 100%;
+    margin-bottom: 0;
+
+    &.is-focused .choices__inner,
+    &.is-open .choices__inner {
+      border: 1px solid rgb(76, 72, 255);
+    }
+
+    &.is-focused + label,
+    &.is-open + label {
+      background-color: rgb(76, 72, 255);
+    }
+
+    &__inner {
+      display: flex;
+      align-items: center;
+
+      background-color: white;
+      font-size: 18px;
+      box-sizing: border-box;
+      min-height: 50px;
+      height: 100%;
+      border: 1px solid rgb(36, 132, 251);
+      border-radius: 0;
+
+      .choices__placeholder {
+        @include input-placeholder;
+      }
+    }
+
+    &__placeholder {
+      opacity: 1;
+    }
+
+    &__list--dropdown {
+      box-sizing: border-box;
+
+      .choices__placeholder {
+        display: none;
+      }
+
+      .choices__item {
+        border-bottom: 1px solid rgba(201, 200, 255, 1);
+        border-right: 0;
+        border-left: 0;
+
+        &:last-child {
+          border-bottom: 0;
+        }
+      }
+
+      &.is-active {
+        height: 119px;
+        overflow-y: auto;
+
+        // Scroll
+        &::-webkit-scrollbar {
+          width: 10px;
+          background: white;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: rgba(36, 132, 251, 1);
+          // -webkit-border-radius: 4px;
+          // -webkit-width: 5px;
+          // border: 3px solid white;
+        }
+      }
+    }
+
+    &__item {
+      color: black;
+      opacity: 1;
+      font-size: 18px !important;
+    }
+
+    &__list--dropdown .choices__item--selectable, 
+    &__list[aria-expanded] .choices__item--selectable {
+      padding-right: 10px;
+    }
+  }
+
+  .choices[data-type*=select-one]:after {
+    height: 8px;
+    width: 8px;
+    z-index: 3;
+    top: 40%;
+    border: 1px solid rgb(148, 148, 148);
+    border-width: 0 0 1px 1px;
+    transform: rotate(-45deg);
+  }
+
+  .choices[data-type*=select-one].is-open:after {
+    top: 60%;
+    border: 1px solid rgb(148, 148, 148);
+    border-width: 1px 1px 0 0;
   }
 }
 
@@ -390,6 +572,10 @@
       &:focus, &:hover {
         outline: none;
         border: 1px solid rgb(76, 72, 255);
+      }
+
+      &::placeholder {
+        @include input-placeholder();
       }
     }
 

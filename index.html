@@ -117,12 +117,12 @@
                     <h2>3. Покупатель</h2>
                     <div class="main__fields">
                         <div class="field correctly">
-                            <input id="field-fio" type="text" placeholder="Введите значение...">
-                            <label for="field-fio">ФИО</label>
+                            <input id="field-cust-fio" type="text" placeholder="Введите значение...">
+                            <label for="field-cust-fio">ФИО</label>
                         </div>
-                        <div class="field false">
-                            <input id="field-date-birth" type="text" placeholder="Введите значение...">
-                            <label for="field-date-birth">Дата рождения</label>
+                        <div class="field wrong">
+                            <input id="field-cust-date-birth" type="text" placeholder="Введите значение...">
+                            <label for="field-cust-date-birth">Дата рождения</label>
                         </div>
                     </div>
                     <div class="main__many-fields">
@@ -138,6 +138,95 @@
                         </div>
                         <div class="many-field__row many-field__row_one">
                             <input type="text" placeholder="Адрес регистрации">
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>4. Транспортное средство</h2>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Марка и модель</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <select class="js-choice" name="" id="">
+                                <option value="">Выберите из списка...</option>
+                                <option value="a">Легковое авто</option>
+                                <option value="a">Легковой фургон</option>
+                                <option value="a">Одиночный грузовой</option>
+                                <option value="a">Мотоцикл</option>
+                                <option value="a">Мопед</option>
+                            </select>
+                            <label for="">Тип ТС</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">VIN</label>
+                        </div>
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Год выпуска</label>
+                        </div>
+                    </div>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Номер кузова</label>
+                        </div>
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Номер шасси/рама</label>
+                        </div>
+                    </div>
+                    <div class="main__fields">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Двигатель №</label>
+                        </div>
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Цвет кузова</label>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>5. Свидетельство о регистрации (СТС)</h2>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Серия</label>
+                        </div>
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Номер</label>
+                        </div>
+                    </div>
+                    <div class="main__fields">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Кем выдано</label>
+                        </div>
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Дата выдачи</label>
+                        </div>
+                    </div>
+                </section>
+                <section class="main__section">
+                    <h2>6. Госномер автомобиля и стоимость</h2>
+                    <div class="main__fields mb20">
+                        <div class="field">
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Госномер</label>
+                        </div>
+                        <div class="field">
+                            <div class="field__prompt">₽</div>
+                            <input id="" type="text" placeholder="Введите значение...">
+                            <label for="">Стоимость</label>
                         </div>
                     </div>
                 </section>
@@ -174,6 +263,7 @@
         </div> -->
     </div>
     <!-- <script src="template/js/jquery-3.6.0.min.js"></script> -->
+    <script src="template/js/choices.min.js"></script>
     <script src="template/js/scripts.js"></script>
 </body>
 </html>
