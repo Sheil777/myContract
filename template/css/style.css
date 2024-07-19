@@ -368,6 +368,42 @@ main {
   text-align: center;
   margin-bottom: 15px;
 }
+@media (max-width: 720px) {
+  .main__section.number1 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number1 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 870px) {
+  .main__section.number2 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number2 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 880px) {
+  .main__section.number3 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number3 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 950px) {
+  .main__section.number4 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number4 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
 .main__fields {
   display: flex;
   justify-content: space-between;
