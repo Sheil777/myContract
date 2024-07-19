@@ -340,6 +340,17 @@ main {
   background-color: rgb(251, 251, 251);
   background-image: url("../images/background.png");
 }
+@media (max-width: 820px) {
+  .main {
+    padding-top: 40px;
+  }
+}
+@media (max-width: 500px) {
+  .main {
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+}
 .main__container {
   max-width: 940px;
   border-radius: 2px;
@@ -357,9 +368,20 @@ main {
   text-transform: uppercase;
   line-height: 38px;
 }
+@media (max-width: 640px) {
+  .main__header {
+    font-size: 24px;
+  }
+}
 .main__section {
   padding: 20px 30px 10px 30px;
   background-color: white;
+}
+@media (max-width: 820px) {
+  .main__section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 .main__section h2 {
   color: rgb(76, 72, 255);
@@ -404,6 +426,11 @@ main {
     flex-grow: 1;
   }
 }
+@media (max-width: 395px) {
+  .main__section.number4 .main__fields input {
+    font-size: 16px;
+  }
+}
 @media (max-width: 830px) {
   .main__section.number5 .main__fields {
     flex-wrap: wrap;
@@ -441,10 +468,19 @@ main {
   }
 }
 @media (max-width: 380px) {
-  .main__section.number9 .main__fields {
+  .main__section.number9 .main__fields, .main__section.number10 .main__fields {
     flex-wrap: wrap;
   }
-  .main__section.number9 .main__fields .radio-button {
+  .main__section.number9 .main__fields .radio-button, .main__section.number10 .main__fields .radio-button {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 820px) {
+  .main__section.number11 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number11 .main__fields .radio-button {
     flex: unset;
     flex-grow: 1;
   }
@@ -459,7 +495,7 @@ main {
 }
 .main__many-fields {
   margin-top: 20px;
-  max-height: 200px;
+  max-height: 300px;
   transition: max-height 0.5s;
   overflow: hidden;
 }
@@ -562,12 +598,23 @@ main {
   background-color: rgb(36, 132, 251);
   white-space: nowrap;
 }
+@media (max-width: 550px) {
+  .field label {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .field input {
   font-size: 18px;
   padding: 0 10px;
   border: 1px solid rgb(36, 132, 251);
   box-sizing: border-box;
   width: 100%;
+}
+@media (max-width: 500px) {
+  .field input {
+    padding-right: 0;
+  }
 }
 .field input:focus, .field input:hover {
   outline: none;
@@ -679,6 +726,21 @@ main {
 }
 .many-field__row {
   display: flex;
+}
+@media (max-width: 870px) {
+  .many-field__row:not(.many-field__row_one) {
+    flex-wrap: wrap;
+  }
+  .many-field__row:not(.many-field__row_one) input {
+    flex: 0 0 50%;
+    border-top: 0;
+    padding-left: 7px;
+    padding-right: 3px;
+    font-size: 16px;
+  }
+  .many-field__row:not(.many-field__row_one) input:nth-child(odd) {
+    border-right: 0;
+  }
 }
 .many-field__row input {
   font-size: 18px;
