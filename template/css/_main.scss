@@ -330,6 +330,14 @@
 
   &__many-fields {
     margin-top: 20px;
+
+    max-height: 200px;
+    transition: max-height 0.5s;
+    overflow: hidden;
+  
+    &.hidden {
+      max-height: 0;
+    }
   }
 
   &__submit {
@@ -368,6 +376,14 @@
   flex: 1 0 0;
 
   flex-grow: 1;
+
+  max-height: 100px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+
+  &.hidden {
+    max-height: 0;
+  }
 
   &__prompt {
     position: absolute;

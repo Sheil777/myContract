@@ -378,6 +378,12 @@ main {
 }
 .main__many-fields {
   margin-top: 20px;
+  max-height: 200px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+.main__many-fields.hidden {
+  max-height: 0;
 }
 .main__submit {
   display: flex;
@@ -407,6 +413,12 @@ main {
   border-radius: 2px;
   flex: 1 0 0;
   flex-grow: 1;
+  max-height: 100px;
+  transition: max-height 0.5s;
+  overflow: hidden;
+}
+.field.hidden {
+  max-height: 0;
 }
 .field__prompt {
   position: absolute;
