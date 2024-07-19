@@ -423,6 +423,9 @@ main {
 .field.off {
   display: none;
 }
+.field.select {
+  overflow: visible;
+}
 .field__prompt {
   position: absolute;
   top: 1px;
@@ -636,7 +639,6 @@ main {
   box-sizing: border-box;
   border-radius: 2px;
   height: 50px;
-  padding: 0 30px;
 }
 .radio-button:has(input:checked) {
   border: 1px solid rgb(76, 72, 255);
@@ -655,6 +657,10 @@ main {
   align-items: center;
   gap: 10px;
   color: rgb(148, 148, 148);
+  width: 100%;
+  height: 100%;
+  padding: 0 30px;
+  box-sizing: border-box;
   cursor: pointer;
 }
 .radio-button label::before, .radio-button label::after {
