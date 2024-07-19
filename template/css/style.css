@@ -404,6 +404,51 @@ main {
     flex-grow: 1;
   }
 }
+@media (max-width: 830px) {
+  .main__section.number5 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number5 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 860px) {
+  .main__section.number6 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number6 .main__fields .field {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 740px) {
+  .main__section.number7 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number7 .main__fields .radio-button {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 920px) {
+  .main__section.number8 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number8 .main__fields .radio-button {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 380px) {
+  .main__section.number9 .main__fields {
+    flex-wrap: wrap;
+  }
+  .main__section.number9 .main__fields .radio-button {
+    flex: unset;
+    flex-grow: 1;
+  }
+}
 .main__fields {
   display: flex;
   justify-content: space-between;
