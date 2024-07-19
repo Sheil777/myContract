@@ -997,3 +997,65 @@
     }
   }
 }
+
+/* ******************************* */
+
+.popup {
+
+  &__body {
+  }
+
+  &__content {
+  }
+}
+.popup-download {
+
+  &__body {
+  }
+
+  &__content {
+  }
+
+  &__header {
+    color: rgb(76, 72, 255);
+    font-weight: 700;
+    font-size: 32px;
+    text-align: center;
+    max-width: 670px;
+  }
+
+  &__block {
+  }
+
+  &__left {
+    ul {
+      li {
+        color: black;
+      }
+    }
+  }
+
+  &__right {
+  }
+}
+.right {
+
+  &__header {
+  }
+
+  &__promo {
+  }
+
+  &__price {
+  }
+}
+.price {
+
+  &__input {
+  }
+
+  &__submit {
+  }
+}
+.price-old {
+}
