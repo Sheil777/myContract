@@ -18,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
     ['input[name="mileage-radio"]', '#mileage-no', '.tohide7'],
     ['input[name="breakdowns"]', '#breakdowns-off', '.tohide8'],
     ['input[name="additionally"]', '#additionally-no', '.tohide9'],
+    ['input[name="arrest"]', '#arrest-no', '.tohide10'],
+    // ['input[name="payment-method"]', '#payment-cash', '.tohide11'],
   ];
 
   blocksToHide.forEach(block => {
@@ -35,6 +37,35 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Отдельно для 11 блока
+  const mileageRadioButtons = document.querySelectorAll('input[name="payment-method"]');
+  mileageRadioButtons.forEach(button => {
+    let mileageNo4 = document.querySelector('#payment-bank');
+    let mileageNo5 = document.querySelector('#payment-transfer');
+    let mileageNo6 = document.querySelector('#payment-transfer-on-check');
+
+    button.addEventListener('change', () => {
+      if(mileageNo4.checked){
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.remove('hidden')});
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('off')});
+        document.querySelector('.tohide11.bank').classList.remove('off');
+      }
+      else if(mileageNo5.checked){
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.remove('hidden')});
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('off')});
+        document.querySelector('.tohide11.transfer').classList.remove('off');
+      }
+      else if(mileageNo6.checked){
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.remove('hidden')});
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('off')});
+        document.querySelector('.tohide11.check').classList.remove('off');
+      }
+      else {
+        document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('hidden')});
+      }
+    })
+
+  });
 
   
   

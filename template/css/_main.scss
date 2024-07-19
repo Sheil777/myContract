@@ -385,6 +385,10 @@
     max-height: 0;
   }
 
+  &.off {
+    display: none;
+  }
+
   &__prompt {
     position: absolute;
     top: 1px;

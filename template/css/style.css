@@ -420,6 +420,9 @@ main {
 .field.hidden {
   max-height: 0;
 }
+.field.off {
+  display: none;
+}
 .field__prompt {
   position: absolute;
   top: 1px;
