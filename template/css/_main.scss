@@ -1006,6 +1006,10 @@
   }
 
   &__content {
+    padding-right: 60px;
+    padding-left: 100px;
+    padding-bottom: 20px;
+    padding-top: 20px;
   }
 }
 .popup-download {
@@ -1014,6 +1018,54 @@
   }
 
   &__content {
+    position: relative;
+    max-width: 1000px;
+
+    .popup-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+      width: 24px;
+      height: 24px;
+
+      cursor: pointer;
+
+      &::before, &::after {
+        position: absolute;
+        top: 10px;
+        left: -2px;
+
+        display: block;
+        content: "";
+        height: 2px;
+        width: 30px;
+        background-color: #b8b8b8;
+      }
+
+      &::before {
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        transform: rotate(45deg);
+      }
+    }
+  }
+
+  &__img {
+    position: absolute;
+    top: -120px;
+    left: -139px;
+    width: 315px;
+  }
+
+  &__img-block {
+    position: absolute;
+    top: -73px;
+    right: -72px;
+    width: 170px;
+    transform: scaleX(-1);
   }
 
   &__header {
@@ -1022,40 +1074,162 @@
     font-size: 32px;
     text-align: center;
     max-width: 670px;
+    text-transform: uppercase;
+    margin-left: 65px;
+    line-height: 40px;
   }
 
   &__block {
+    position: relative;
+    display: flex;
+    margin-top: 18px;
   }
 
   &__left {
+    padding-top: 60px;
+    max-width: 360px;
+    margin-right: 50px;
+
     ul {
+      list-style: none;
+
       li {
+        display: flex;
+        align-items: start;
         color: black;
+        gap: 10px;
+        font-size: 20px;
+
+        margin-bottom: 18px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+
+        &::before {
+          display: inline-block;
+          content: url("../images/icons/popup-li.svg");
+          height: 21.5px;
+        }
       }
     }
   }
 
   &__right {
+    width: 430px;
+    background-color: rgb(241, 241, 241);
   }
 }
 .right {
 
   &__header {
+    background-color: rgb(36, 132, 251);
+    text-transform: uppercase;
+    font-size: 22px;
+    text-align: center;
+    font-weight: 700;
+    padding: 10px;
   }
 
   &__promo {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: center;
+    color: rgb(255, 90, 120);
+    margin: 10px;
   }
 
   &__price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    .price {  
+      background-color: rgb(255, 90, 120);
+      border-radius: 80px;
+      padding: 7px 14px;
+
+      font-size: 22px;
+      font-weight: 7000;
+    }
+
+    .price-old {
+      color: rgb(148, 148, 148);
+      font-size: 20px;
+      font-weight: 300;
+      text-decoration: line-through;
+    }
   }
 }
-.price {
+.email {
 
   &__input {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 50px;
+    padding: 15px 20px;
+
+    input {
+      height: 100%;
+      border: 1px solid rgb(36, 132, 251);
+      flex-grow: 1;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 18px;
+      font-weight: 400;
+      
+      transition: all 0.3s;
+
+      &::placeholder {
+        color: rgb(148, 148, 148);
+        font-size: 18px;
+        font-weight: 400;
+      }
+
+      &:focus, &:hover {
+        outline: none;
+        border: 1px solid rgb(76, 72, 255);
+
+        & + label {
+          background-color: rgb(76, 72, 255);
+        }
+      }
+    }
+
+    label {
+      background-color: rgb(36, 132, 251);
+      font-weight: 600;
+      font-size: 18px;
+      padding: 14.5px 30px;
+      color: white;
+      box-sizing: border-box;
+      min-width: 116px;
+
+      transition: all 0.3s;
+    }
   }
 
   &__submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    text-transform: uppercase;
+    background-color: rgb(36, 132, 251);
+    font-weight: 600;
+    font-size: 18px;
+    color: white;
+    padding: 16.5px;
+
+    margin: 20px;
+    margin-top: 0;
+
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: rgb(76, 72, 255);
+    }
   }
-}
-.price-old {
 }

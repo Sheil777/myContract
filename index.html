@@ -362,7 +362,7 @@
                 </section>
                 <section class="main__section">
                     <h2 style="display: none;">Кнопка отправки</h2>
-                    <a class="main__submit" href="#">Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                    <a class="main__submit popup-link" href="#popup-download">Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
                 </section>
             </div>
         </main>
@@ -391,8 +391,11 @@
         <div id="popup-download" class="popup popup-download">
             <div class="popup__body popup-download__body">
                 <div class="popup__content popup-download__content">
+                    <div class="popup-close"></div>
+                    <img class="popup-download__img" src="./template/images/present.png" alt="Картинка подарка">
                     <div class="popup-download__header">Скачать договор купли-продажи автомобиля (ДКП)</div>
                     <div class="popup-download__block">
+                        <img class="popup-download__img-block" src="./template/images/present.png" alt="Картинка подарка">
                         <div class="popup-download__left">
                             <ul>
                                 <li>Гарантия юридической чистоты</li>
@@ -406,13 +409,13 @@
                             <div class="right__promo">Первый договор всего за</div>
                             <div class="right__price">
                                 <div class="price">1 ₽убль</div>
-                                <div class="price-old"></div>
+                                <div class="price-old">899 ₽</div>
                             </div>
-                            <div class="price__input">
+                            <div class="email__input">
                                 <input type="text" id="popup-input" placeholder="Введите ваш E-mail">
                                 <label for="popup-input">E-mail</label>
                             </div>
-                            <a href="#" class="price__submit">Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                            <a href="#" class="email__submit">Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
                         </div>
                     </div>
                 </div>
