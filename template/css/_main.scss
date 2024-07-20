@@ -9,16 +9,16 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
-  &._scroll-anim {
-    transition: all 0.8s ease 0s;
-    transform: translate(0, -50%);
-    opacity: 0;
+  // &._scroll-anim {
+  //   transition: all 0.8s ease 0s;
+  //   transform: translate(0, -50%);
+  //   opacity: 0;
 
-    &-active {
-      transform: translate(0, 0);
-      opacity: 1;
-    }
-  }
+  //   &-active {
+  //     transform: translate(0, 0);
+  //     opacity: 1;
+  //   }
+  // }
 
   &__container {
     display: flex;
@@ -98,6 +98,7 @@
 
     &.phone-open {
       height: 100%;
+      z-index: 10;
     }
   }
 

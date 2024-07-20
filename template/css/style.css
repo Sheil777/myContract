@@ -155,15 +155,6 @@ body.lock {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-.header._scroll-anim {
-  transition: all 0.8s ease 0s;
-  transform: translate(0, -50%);
-  opacity: 0;
-}
-.header._scroll-anim-active {
-  transform: translate(0, 0);
-  opacity: 1;
-}
 .header__container {
   display: flex;
   justify-content: space-between;
@@ -229,6 +220,7 @@ body.lock {
   }
   .menu.phone-open {
     height: 100%;
+    z-index: 10;
   }
 }
 .menu__list {
