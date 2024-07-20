@@ -1015,11 +1015,34 @@
 .popup-download {
 
   &__body {
+    padding: 30px 80px;
+
+    @media (max-width: 1040px) {
+      padding: 80px;
+    }
+
+    @media (max-width: 550px) {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    @media (max-width: 450px) {
+      padding-top: 115px;
+    }
   }
 
   &__content {
     position: relative;
     max-width: 1000px;
+
+    @media (max-width: 768px) {
+      padding: 20px;
+    }
+
+    @media (max-width: 550px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
 
     .popup-close {
       position: absolute;
@@ -1031,6 +1054,14 @@
 
       cursor: pointer;
 
+      @media (max-width: 450px) {
+        top: -72px;
+        right: 50%;
+        transform: translateX(50%);
+        width: 66px;
+        height: 66px;
+      }
+
       &::before, &::after {
         position: absolute;
         top: 10px;
@@ -1041,6 +1072,11 @@
         height: 2px;
         width: 30px;
         background-color: #b8b8b8;
+
+        @media (max-width: 450px) {
+          width: 66px;
+          height: 4px;
+        }
       }
 
       &::before {
@@ -1058,6 +1094,29 @@
     top: -120px;
     left: -139px;
     width: 315px;
+
+    @media (max-width: 1040px) {
+      width: 240px;
+      left: -110px;
+
+    }
+
+    @media (max-width: 768px) {
+      width: 170px;
+      left: -80px;
+      top: -87px;
+    }
+
+    @media (max-width: 550px) {
+      width: 120px;
+      left: -32px;
+      top: -52px;
+      transform: rotate(-10deg);
+    }
+
+    @media (max-width: 374px) {
+      left: -45px;
+    }
   }
 
   &__img-block {
@@ -1066,6 +1125,12 @@
     right: -72px;
     width: 170px;
     transform: scaleX(-1);
+
+    @media (max-width: 768px) {
+      top: -40px;
+      right: -35px;
+      width: 110px;
+    }
   }
 
   &__header {
@@ -1077,18 +1142,61 @@
     text-transform: uppercase;
     margin-left: 65px;
     line-height: 40px;
+    
+
+    @media (max-width: 1040px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 28px;
+      padding: 0 25px;
+    }
+
+    @media (max-width: 550px) {
+      padding: 0 35px;
+    }
+
+    @media (max-width: 374px) {
+      font-size: 20px;
+      padding: 0 30px;
+    }
   }
 
   &__block {
     position: relative;
     display: flex;
     margin-top: 18px;
+
+    @media (max-width: 1040px) {
+      flex-direction: column-reverse;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      margin-top: 24px;
+    }
+
+    @media (max-width: 576px) {
+      margin-top: 14px;
+    }
   }
 
   &__left {
     padding-top: 60px;
     max-width: 360px;
     margin-right: 50px;
+
+    @media (max-width: 1040px) {
+      padding-top: 25px;
+    }
+
+    @media (max-width: 450px) {
+      margin-right: 0;
+      padding-top: 15px;
+    }
 
     ul {
       list-style: none;
@@ -1101,6 +1209,12 @@
         font-size: 20px;
 
         margin-bottom: 18px;
+
+        @media (max-width: 450px) {
+          font-size: 18px;
+          margin-bottom: 12px;
+          line-height: 20px;
+        }
 
         &:last-child {
           margin-bottom: 0;
@@ -1116,8 +1230,13 @@
   }
 
   &__right {
+    position: relative;
     width: 430px;
     background-color: rgb(241, 241, 241);
+
+    @media (max-width: 768px) {
+      width: unset;
+    }
   }
 }
 .right {
@@ -1170,6 +1289,14 @@
     height: 50px;
     padding: 15px 20px;
 
+    @media (max-width: 550px) {
+      padding: 15px;   
+    }
+
+    @media (max-width: 374px) {
+      height: 40px;
+    }
+
     input {
       height: 100%;
       border: 1px solid rgb(36, 132, 251);
@@ -1181,10 +1308,27 @@
       
       transition: all 0.3s;
 
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+
+      @media (max-width: 450px) {
+        padding-right: 5px;
+      }
+
+      @media (max-width: 374px) {
+        font-size: 16px;
+        padding-left: 5px;
+      }
+
       &::placeholder {
         color: rgb(148, 148, 148);
         font-size: 18px;
         font-weight: 400;
+
+        @media (max-width: 374px) {
+          font-size: 16px;
+        }
       }
 
       &:focus, &:hover {
@@ -1207,6 +1351,12 @@
       min-width: 116px;
 
       transition: all 0.3s;
+
+      @media (max-width: 374px) {
+        padding: 12px 14.5px;
+        min-width: 80px;
+        font-size: 16px;
+      }
     }
   }
 
@@ -1227,6 +1377,16 @@
     margin-top: 0;
 
     transition: background-color 0.4s;
+
+    @media (max-width: 550px) {
+      margin-left: 15px;   
+      margin-right: 15px;   
+    }
+
+    @media (max-width: 374px) {
+      font-size: 16px;
+      padding: 15px;
+    }
 
     &:hover {
       background-color: rgb(76, 72, 255);
