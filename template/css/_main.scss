@@ -9,6 +9,17 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
+  &._scroll-anim {
+    transition: all 0.8s ease 0s;
+    transform: translate(0, -50%);
+    opacity: 0;
+
+    &-active {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -312,8 +323,20 @@
     text-transform: uppercase;
     line-height: 38px;
 
+    &._scroll-anim {
+      transition: all 0.8s ease 0s;
+      transform: translate(0, -50%);
+      opacity: 0;
+  
+      &-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
+    }
+
     @media (max-width: 640px) {
       font-size: 24px;
+      line-height: 28px;
     }
   }
 
@@ -324,6 +347,17 @@
     @media (max-width: 820px) {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    &._scroll-anim {
+      transition: all 0.8s ease 0s;
+      transform: translate(0, 50%);
+      opacity: 0;
+
+      &-active {
+        transform: translate(0, 0);
+        opacity: 1;
+      }
     }
 
     h2 {
