@@ -33,6 +33,10 @@ body {
     // color: black;
     font-family: "Raleway", sans-serif;
     font-style: normal;
+
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .wrapper {

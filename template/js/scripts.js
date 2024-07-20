@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   burger.addEventListener('click', () => {
     burger.classList.toggle('burger_close');
     document.querySelector('.header__menu').classList.toggle('phone-open');
+    document.querySelector('body').classList.toggle('lock');
   });
 
   const customSelect = document.querySelector(".js-choice");
