@@ -80,7 +80,7 @@
                             <label for="field-city">Город</label>
                         </div>
                         <div class="field">
-                            <input id="field-data" type="text" placeholder="Введите значение...">
+                            <input class="mask__data" id="field-data" type="text" placeholder="Введите значение...">
                             <label for="field-data">Дата</label>
                         </div>
                     </div>
@@ -94,16 +94,16 @@
                         </div>
                         <div class="field">
                             <input id="field-date-birth" type="text" placeholder="Введите значение...">
-                            <label for="field-date-birth">Дата рождения</label>
+                            <label class="mask__data" for="field-date-birth">Дата рождения</label>
                         </div>
                     </div>
                     <div class="main__many-fields">
                         <div class="many-field__header">Паспорт</div>
                         <div class="many-field__row">
-                            <input type="text" placeholder="Серия">
-                            <input type="text" placeholder="Номер">
-                            <input type="text" placeholder="Код подразделения">
-                            <input type="text" placeholder="Дата выдачи">
+                            <input class="mask__passport-series" type="text" placeholder="Серия">
+                            <input class="mask__passport-number" type="text" placeholder="Номер">
+                            <input class="mask__passport-kod" type="text" placeholder="Код подразделения">
+                            <input class="mask__data" type="text" placeholder="Дата выдачи">
                         </div>
                         <div class="many-field__row many-field__row_one">
                             <input type="text" placeholder="Кем выдан">
@@ -121,17 +121,17 @@
                             <label for="field-cust-fio">ФИО</label>
                         </div>
                         <div class="field wrong">
-                            <input id="field-cust-date-birth" type="text" placeholder="Введите значение...">
+                            <input class="mask__data" id="field-cust-date-birth" type="text" placeholder="Введите значение...">
                             <label for="field-cust-date-birth">Дата рождения</label>
                         </div>
                     </div>
                     <div class="main__many-fields">
                         <div class="many-field__header">Паспорт</div>
                         <div class="many-field__row">
-                            <input type="text" placeholder="Серия">
-                            <input type="text" placeholder="Номер">
-                            <input type="text" placeholder="Код подразделения">
-                            <input type="text" placeholder="Дата выдачи">
+                            <input class="mask__passport-series" type="text" placeholder="Серия">
+                            <input class="mask__passport-number" type="text" placeholder="Номер">
+                            <input class="mask__passport-kod" type="text" placeholder="Код подразделения">
+                            <input class="mask__data" type="text" placeholder="Дата выдачи">
                         </div>
                         <div class="many-field__row many-field__row_one">
                             <input type="text" placeholder="Кем выдан">
@@ -168,7 +168,7 @@
                             <label for="">VIN</label>
                         </div>
                         <div class="field">
-                            <input id="" type="text" placeholder="Введите значение...">
+                            <input class="mask__year" id="" type="text" placeholder="Введите значение...">
                             <label for="">Год выпуска</label>
                         </div>
                     </div>
@@ -211,7 +211,7 @@
                             <label for="">Кем выдано</label>
                         </div>
                         <div class="field">
-                            <input id="" type="text" placeholder="Введите значение...">
+                            <input class="mask__data" id="" type="text" placeholder="Введите значение...">
                             <label for="">Дата выдачи</label>
                         </div>
                     </div>
@@ -225,7 +225,7 @@
                         </div>
                         <div class="field">
                             <div class="field__prompt">₽</div>
-                            <input id="" type="text" placeholder="Введите значение...">
+                            <input class="mask__money" id="" type="text" placeholder="Введите значение...">
                             <label for="">Стоимость</label>
                         </div>
                     </div>
@@ -422,7 +422,8 @@
             </div>
         </div>
     </div>
-    <!-- <script src="template/js/jquery-3.6.0.min.js"></script> -->
+    <script src="template/js/jquery-3.6.0.min.js"></script>
+    <script src="template/js/jquery.maskedinput.min.js"></script>
     <script src="template/js/choices.min.js"></script>
     <script src="template/js/scroll-anim.js"></script>
     <script src="template/js/popups.js"></script>

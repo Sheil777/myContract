@@ -69,5 +69,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   
-  
+  // Маски
+  console.log("ololo")
+  $(".mask__data").mask("99.99.9999");
+  $(".mask__passport-series").mask("9999");
+  $(".mask__passport-number").mask("999999");
+  $(".mask__passport-kod").mask("999-999");
+  $(".mask__year").mask("9999 г.");
+  // $(".mask__money").mask([0-9]);
 });
