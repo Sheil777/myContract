@@ -1000,6 +1000,7 @@ body.lock {
 @media (max-width: 1040px) {
   .popup-download__body {
     padding: 80px;
+    padding-bottom: 30px;
   }
 }
 @media (max-width: 550px) {
@@ -1101,7 +1102,7 @@ body.lock {
 }
 .popup-download__img-block {
   position: absolute;
-  top: -73px;
+  top: -64px;
   right: -72px;
   width: 170px;
   transform: scaleX(-1);
@@ -1109,8 +1110,14 @@ body.lock {
 @media (max-width: 768px) {
   .popup-download__img-block {
     top: -40px;
-    right: -35px;
-    width: 110px;
+    right: -45px;
+    width: 150px;
+  }
+}
+@media (max-width: 374px) {
+  .popup-download__img-block {
+    width: 120px;
+    right: -34px;
   }
 }
 .popup-download__header {
@@ -1215,19 +1222,19 @@ body.lock {
   width: 430px;
   background-color: rgb(241, 241, 241);
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .popup-download__right {
-    width: unset;
+    width: 100%;
   }
 }
 
 .right__header {
   background-color: rgb(36, 132, 251);
   text-transform: uppercase;
-  font-size: 22px;
+  font-size: 32px;
   text-align: center;
   font-weight: 700;
-  padding: 10px;
+  padding: 19px;
 }
 .right__promo {
   font-size: 24px;
@@ -1235,6 +1242,7 @@ body.lock {
   text-align: center;
   color: rgb(255, 90, 120);
   margin: 10px;
+  margin-top: 30px;
 }
 .right__price {
   display: flex;
@@ -1247,7 +1255,7 @@ body.lock {
   border-radius: 80px;
   padding: 7px 14px;
   font-size: 22px;
-  font-weight: 7000;
+  font-weight: 700;
 }
 .right__price .price-old {
   color: rgb(148, 148, 148);
@@ -1256,90 +1264,6 @@ body.lock {
   text-decoration: line-through;
 }
 
-.email__input {
-  display: flex;
-  flex-direction: row-reverse;
-  height: 50px;
-  padding: 15px 20px;
-}
-@media (max-width: 550px) {
-  .email__input {
-    padding: 15px;
-  }
-}
-@media (max-width: 374px) {
-  .email__input {
-    height: 40px;
-  }
-}
-.email__input input {
-  height: 100%;
-  border: 1px solid rgb(36, 132, 251);
-  flex-grow: 1;
-  padding: 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  font-weight: 400;
-  transition: all 0.3s;
-}
-@media (max-width: 768px) {
-  .email__input input {
-    width: 100%;
-  }
-}
-@media (max-width: 450px) {
-  .email__input input {
-    padding-right: 5px;
-  }
-}
-@media (max-width: 374px) {
-  .email__input input {
-    font-size: 16px;
-    padding-left: 5px;
-  }
-}
-.email__input input::-moz-placeholder {
-  color: rgb(148, 148, 148);
-  font-size: 18px;
-  font-weight: 400;
-}
-.email__input input::placeholder {
-  color: rgb(148, 148, 148);
-  font-size: 18px;
-  font-weight: 400;
-}
-@media (max-width: 374px) {
-  .email__input input::-moz-placeholder {
-    font-size: 16px;
-  }
-  .email__input input::placeholder {
-    font-size: 16px;
-  }
-}
-.email__input input:focus, .email__input input:hover {
-  outline: none;
-  border: 1px solid rgb(76, 72, 255);
-}
-.email__input input:focus + label, .email__input input:hover + label {
-  background-color: rgb(76, 72, 255);
-}
-.email__input label {
-  background-color: rgb(36, 132, 251);
-  font-weight: 600;
-  font-size: 18px;
-  padding: 14.5px 30px;
-  color: white;
-  box-sizing: border-box;
-  min-width: 116px;
-  transition: all 0.3s;
-}
-@media (max-width: 374px) {
-  .email__input label {
-    padding: 12px 14.5px;
-    min-width: 80px;
-    font-size: 16px;
-  }
-}
 .email__submit {
   display: flex;
   justify-content: center;
@@ -1352,7 +1276,7 @@ body.lock {
   color: white;
   padding: 16.5px;
   margin: 20px;
-  margin-top: 0;
+  margin-top: 30px;
   transition: background-color 0.4s;
 }
 @media (max-width: 550px) {

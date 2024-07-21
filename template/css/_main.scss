@@ -1054,6 +1054,7 @@
 
     @media (max-width: 1040px) {
       padding: 80px;
+      padding-bottom: 30px;
     }
 
     @media (max-width: 550px) {
@@ -1156,15 +1157,20 @@
 
   &__img-block {
     position: absolute;
-    top: -73px;
+    top: -64px;
     right: -72px;
     width: 170px;
     transform: scaleX(-1);
 
     @media (max-width: 768px) {
       top: -40px;
-      right: -35px;
-      width: 110px;
+      right: -45px;
+      width: 150px;
+    }
+
+    @media (max-width: 374px) {
+      width: 120px;
+      right: -34px;
     }
   }
 
@@ -1269,8 +1275,8 @@
     width: 430px;
     background-color: rgb(241, 241, 241);
 
-    @media (max-width: 768px) {
-      width: unset;
+    @media (max-width: 500px) {
+      width: 100%;
     }
   }
 }
@@ -1279,10 +1285,10 @@
   &__header {
     background-color: rgb(36, 132, 251);
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 32px;
     text-align: center;
     font-weight: 700;
-    padding: 10px;
+    padding: 19px;
   }
 
   &__promo {
@@ -1291,6 +1297,7 @@
     text-align: center;
     color: rgb(255, 90, 120);
     margin: 10px;
+    margin-top: 30px;
   }
 
   &__price {
@@ -1305,7 +1312,7 @@
       padding: 7px 14px;
 
       font-size: 22px;
-      font-weight: 7000;
+      font-weight: 700;
     }
 
     .price-old {
@@ -1318,82 +1325,82 @@
 }
 .email {
 
-  &__input {
-    display: flex;
-    flex-direction: row-reverse;
-    height: 50px;
-    padding: 15px 20px;
+  // &__input {
+  //   display: flex;
+  //   flex-direction: row-reverse;
+  //   height: 50px;
+  //   padding: 15px 20px;
 
-    @media (max-width: 550px) {
-      padding: 15px;   
-    }
+  //   @media (max-width: 550px) {
+  //     padding: 15px;   
+  //   }
 
-    @media (max-width: 374px) {
-      height: 40px;
-    }
+  //   @media (max-width: 374px) {
+  //     height: 40px;
+  //   }
 
-    input {
-      height: 100%;
-      border: 1px solid rgb(36, 132, 251);
-      flex-grow: 1;
-      padding: 10px;
-      box-sizing: border-box;
-      font-size: 18px;
-      font-weight: 400;
+  //   input {
+  //     height: 100%;
+  //     border: 1px solid rgb(36, 132, 251);
+  //     flex-grow: 1;
+  //     padding: 10px;
+  //     box-sizing: border-box;
+  //     font-size: 18px;
+  //     font-weight: 400;
       
-      transition: all 0.3s;
+  //     transition: all 0.3s;
 
-      @media (max-width: 768px) {
-        width: 100%;
-      }
+  //     @media (max-width: 768px) {
+  //       width: 100%;
+  //     }
 
-      @media (max-width: 450px) {
-        padding-right: 5px;
-      }
+  //     @media (max-width: 450px) {
+  //       padding-right: 5px;
+  //     }
 
-      @media (max-width: 374px) {
-        font-size: 16px;
-        padding-left: 5px;
-      }
+  //     @media (max-width: 374px) {
+  //       font-size: 16px;
+  //       padding-left: 5px;
+  //     }
 
-      &::placeholder {
-        color: rgb(148, 148, 148);
-        font-size: 18px;
-        font-weight: 400;
+  //     &::placeholder {
+  //       color: rgb(148, 148, 148);
+  //       font-size: 18px;
+  //       font-weight: 400;
 
-        @media (max-width: 374px) {
-          font-size: 16px;
-        }
-      }
+  //       @media (max-width: 374px) {
+  //         font-size: 16px;
+  //       }
+  //     }
 
-      &:focus, &:hover {
-        outline: none;
-        border: 1px solid rgb(76, 72, 255);
+  //     &:focus, &:hover {
+  //       outline: none;
+  //       border: 1px solid rgb(76, 72, 255);
 
-        & + label {
-          background-color: rgb(76, 72, 255);
-        }
-      }
-    }
+  //       & + label {
+  //         background-color: rgb(76, 72, 255);
+  //       }
+  //     }
+  //   }
 
-    label {
-      background-color: rgb(36, 132, 251);
-      font-weight: 600;
-      font-size: 18px;
-      padding: 14.5px 30px;
-      color: white;
-      box-sizing: border-box;
-      min-width: 116px;
+  //   label {
+  //     background-color: rgb(36, 132, 251);
+  //     font-weight: 600;
+  //     font-size: 18px;
+  //     padding: 14.5px 30px;
+  //     color: white;
+  //     box-sizing: border-box;
+  //     min-width: 116px;
 
-      transition: all 0.3s;
+  //     transition: all 0.3s;
 
-      @media (max-width: 374px) {
-        padding: 12px 14.5px;
-        min-width: 80px;
-        font-size: 16px;
-      }
-    }
-  }
+  //     @media (max-width: 374px) {
+  //       padding: 12px 14.5px;
+  //       min-width: 80px;
+  //       font-size: 16px;
+  //     }
+  //   }
+  // }
 
   &__submit {
     display: flex;
@@ -1409,7 +1416,7 @@
     padding: 16.5px;
 
     margin: 20px;
-    margin-top: 0;
+    margin-top: 30px;
 
     transition: background-color 0.4s;
 
