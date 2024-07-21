@@ -17,24 +17,38 @@ document.addEventListener('DOMContentLoaded', () => {
   // 3. Блок для скрытия
   var blocksToHide = [
     ['input[name="mileage-radio"]', '#mileage-no', '.tohide7'],
-    ['input[name="breakdowns"]', '#breakdowns-off', '.tohide8'],
     ['input[name="additionally"]', '#additionally-no', '.tohide9'],
     ['input[name="arrest"]', '#arrest-no', '.tohide10'],
-    // ['input[name="payment-method"]', '#payment-cash', '.tohide11'],
   ];
 
   blocksToHide.forEach(block => {
     const mileageRadioButtons = document.querySelectorAll(block[0]);
     mileageRadioButtons.forEach(button => {
-      const mileageNo = document.querySelector(block[1]);
+        const mileageNo = document.querySelector(block[1]);
 
-      button.addEventListener('change', () => {
-        if(mileageNo.checked){
-          document.querySelector(block[2]).classList.add('hidden');
-        }else{
-          document.querySelector(block[2]).classList.remove('hidden');
-        }
-      })
+        button.addEventListener('change', () => {
+          if(mileageNo.checked){
+            document.querySelector(block[2]).classList.add('hidden');
+          }else{
+            document.querySelector(block[2]).classList.remove('hidden');
+          }
+        })
+    });
+  });
+
+  // Отдельно для 8 блока
+  blocksToHide.forEach(block => {
+    const mileageRadioButtons = document.querySelectorAll('input[name="breakdowns"]');
+    mileageRadioButtons.forEach(button => {
+
+        button.addEventListener('change', () => {
+          if(document.querySelector('#no-breakdowns').checked || document.querySelector('#breakdowns-off').checked){
+            document.querySelector('.tohide8').classList.add('hidden');
+          }else{
+            document.querySelector('.tohide8').classList.remove('hidden');
+          }
+        })
+
     });
   });
 
@@ -70,7 +84,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   
   // Маски
-  console.log("ololo")
   $(".mask__data").mask("99.99.9999");
   $(".mask__passport-series").mask("9999");
   $(".mask__passport-number").mask("999999");
