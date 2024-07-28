@@ -1293,4 +1293,45 @@ body.lock {
 }
 .email__submit:hover {
   background-color: rgb(76, 72, 255);
+}
+
+.popup-error__content {
+  padding: 20px 60px;
+}
+@media (max-width: 410px) {
+  .popup-error__content {
+    padding: 14px;
+  }
+}
+.popup-error__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+.popup-error__close::before, .popup-error__close::after {
+  position: absolute;
+  top: 10px;
+  left: -2px;
+  display: block;
+  content: "";
+  height: 2px;
+  width: 30px;
+  background-color: #b8b8b8;
+}
+.popup-error__close::before {
+  transform: rotate(-45deg);
+}
+.popup-error__close::after {
+  transform: rotate(45deg);
+}
+.popup-error__message {
+  color: rgb(76, 72, 255);
+  font-size: 24px;
+  font-weight: 600;
+  padding: 40px 0;
+  padding-bottom: 30px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

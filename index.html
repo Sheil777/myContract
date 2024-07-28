@@ -153,11 +153,13 @@
                         <div class="field select">
                             <select class="js-choice" name="" id="">
                                 <option value="">Выберите из списка...</option>
-                                <option value="a">Легковое авто</option>
-                                <option value="a">Легковой фургон</option>
-                                <option value="a">Одиночный грузовой</option>
+                                <option value="a">Легковой</option>
                                 <option value="a">Мотоцикл</option>
-                                <option value="a">Мопед</option>
+                                <option value="a">Мотороллер</option>
+                                <option value="a">Грузовой</option>
+                                <option value="a">Автобус</option>
+                                <option value="a">Самоходная машина</option>
+                                <option value="a">Седельный тягач</option>
                             </select>
                             <label for="">Тип ТС</label>
                         </div>
@@ -411,8 +413,19 @@
                                 <div class="price">1 ₽убль</div>
                                 <div class="price-old">899 ₽</div>
                             </div>
-                            <a href="#" class="email__submit">Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                            <a href="#popup-error" class="email__submit popup-link">Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup-error" class="popup popup-error">
+            <div class="popup__body popup-error__body">
+                <div class="popup__content popup-error__content">
+                    <div class="popup-close popup-error__close"></div>
+                    <div class="popup-error__message">
+                        Извините, сервис временно не работает
                     </div>
                 </div>
             </div>
