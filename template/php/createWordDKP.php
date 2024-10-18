@@ -37,10 +37,7 @@ function file_force_download($file) {
     header('Content-Length: ' . filesize($file));
     // читаем файл и отправляем его пользователю
     readfile($file);
-    
-    return true;
-  } else {
-    return false;
+    // exit;
   }
 }
 

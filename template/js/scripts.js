@@ -90,4 +90,39 @@ document.addEventListener('DOMContentLoaded', () => {
   $(".mask__passport-kod").mask("999-999");
   $(".mask__year").mask("9999 г.");
   // $(".mask__money").mask([0-9]);
+
+
+
+  // Скачивание файла
+  document.querySelector('.main__form').addEventListener("submit", function(event){
+    event.preventDefault();
+    
+    let required = document.querySelectorAll('.field.required');
+    required.forEach(element => {
+      let input = element.querySelector('input');
+      if(input.value.trim() == "") {
+        element.classList.add('wrong');
+      }
+    });
+
+    let manyFieldRequired = document.querySelectorAll('.main__many-fields.required');
+    manyFieldRequired.forEach(element => {
+      let inputs = element.querySelectorAll('input');
+      for(let i = 0; i < inputs.length; i++){
+        let input = inputs[i];
+        if(input.value.trim() == "") {
+          element.classList.add('wrong');
+          break;
+        }
+      }
+    });
+
+    let selectsRequired = document.querySelectorAll('.required_select');
+    selectsRequired.forEach(select => {
+      if(select.querySelector('select').value == "") {
+        select.classList.add('wrong');
+      }
+    })
+  });
+
 });

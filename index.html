@@ -72,15 +72,15 @@
         <main class="main">
             <div class="main__container">
                 <h1 class="main__header _scroll-anim _scroll-anim-no-hide">Составить договор купли-продажи автомобиля онлайн</h1>
-                <form action="./template/php/createWordDKP.php" method="POST">
+                <form action="./template/php/createWordDKP.php" method="POST" class="main__form">
                     <section class="main__section number1 _scroll-anim _scroll-anim-no-hide">
                         <h2>1. Договор купли-продажи автомобиля</h2>
                         <div class="main__fields">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="field-city" type="text" name="paragraph1_city" placeholder="Введите значение...">
                                 <label for="field-city">Город</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input class="mask__data" id="field-data" type="tel" name="paragraph1_date" placeholder="Введите значение...">
                                 <label for="field-data">Дата</label>
                             </div>
@@ -89,16 +89,16 @@
                     <section class="main__section number2 _scroll-anim _scroll-anim-no-hide">
                         <h2>2. Продавец</h2>
                         <div class="main__fields">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="field-fio" name="paragraph2_fio" type="text" placeholder="Введите значение...">
                                 <label for="field-fio">ФИО</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input class="mask__data" id="field-date-birth" name="paragraph2_dateBirth" type="tel" placeholder="Введите значение...">
                                 <label for="field-date-birth">Дата рождения</label>
                             </div>
                         </div>
-                        <div class="main__many-fields">
+                        <div class="main__many-fields required">
                             <div class="many-field__header">Паспорт продавца</div>
                             <div class="many-field__row">
                                 <input class="mask__passport-series" type="tel" name="paragraph2_series" placeholder="Серия">
@@ -117,16 +117,16 @@
                     <section class="main__section number3 _scroll-anim _scroll-anim-no-hide">
                         <h2>3. Покупатель</h2>
                         <div class="main__fields">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="field-cust-fio" type="text" name="paragraph3_fio" placeholder="Введите значение...">
                                 <label for="field-cust-fio">ФИО</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input class="mask__data" id="field-cust-date-birth" type="tel" name="paragraph3_dateBirth" placeholder="Введите значение...">
                                 <label for="field-cust-date-birth">Дата рождения</label>
                             </div>
                         </div>
-                        <div class="main__many-fields">
+                        <div class="main__many-fields required">
                             <div class="many-field__header">Паспорт покупателя</div>
                             <div class="many-field__row">
                                 <input class="mask__passport-series" type="tel" name="paragraph3_series" placeholder="Серия">
@@ -145,13 +145,13 @@
                     <section class="main__section number4 _scroll-anim _scroll-anim-no-hide">
                         <h2>4. Транспортное средство</h2>
                         <div class="main__fields mb20">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_model" type="text" name="paragraph4_model" placeholder="Введите значение...">
                                 <label for="paragraph4_model">Марка и модель</label>
                             </div>
                         </div>
                         <div class="main__fields mb20">
-                            <div class="field select">
+                            <div class="field select required_select">
                                 <select class="js-choice" name="paragraph4_type" id="paragraph4_type">
                                     <option value="">Выберите из списка...</option>
                                     <option value="Легковой">Легковой</option>
@@ -166,31 +166,31 @@
                             </div>
                         </div>
                         <div class="main__fields mb20">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_vin" type="text" name="paragraph4_vin" placeholder="Введите значение...">
                                 <label for="paragraph4_vin">VIN</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input class="mask__year" id="paragraph4_year" type="tel" name="paragraph4_year" placeholder="Введите значение...">
                                 <label for="paragraph4_year">Год выпуска</label>
                             </div>
                         </div>
                         <div class="main__fields mb20">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_numberCarBody" type="text" name="paragraph4_numberCarBody" placeholder="Введите значение...">
                                 <label for="paragraph4_numberCarBody">Номер кузова</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_numberChassis" type="text" name="paragraph4_numberChassis" placeholder="Введите значение...">
                                 <label for="paragraph4_numberChassis">№ шасси/рама</label>
                             </div>
                         </div>
                         <div class="main__fields">
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_numberEngine" type="text" name="paragraph4_numberEngine" placeholder="Введите значение...">
                                 <label for="paragraph4_numberEngine">Двигатель №</label>
                             </div>
-                            <div class="field">
+                            <div class="field required">
                                 <input id="paragraph4_color" type="text" name="paragraph4_color" placeholder="Введите значение...">
                                 <label for="paragraph4_color">Цвет кузова</label>
                             </div>
@@ -365,9 +365,11 @@
                     </section>
                     <section class="main__section _scroll-anim _scroll-anim-no-hide">
                         <h2 style="display: none;">Кнопка отправки</h2>
-                        <a class="main__submit popup-link" href="#popup-download">Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                        <!-- <a class="main__submit popup-link" href="#popup-download">
+                            Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки">
+                        </a> -->
                         <button type="submit" class="main__submit">
-                            Составить договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки">
+                            Скачать договор <img src="./template/images/icons/download.svg" alt="Иконка загрузки">
                         </button>
                     </section>
                 </form>
