@@ -526,6 +526,27 @@
     &.hidden {
       max-height: 0;
     }
+
+    &.wrong {
+      .many-field__header {
+        background-color: rgb(251, 78, 78);
+      }
+  
+      input {
+        border: 1px solid rgb(251, 78, 78);
+        border-top: 0;
+        color: rgb(251, 78, 78);
+  
+        &:hover {
+          border: 1px solid rgb(251, 78, 78);
+        }
+  
+        &:hover + label {
+          background-color: rgb(251, 78, 78);
+        }
+      }
+
+    }
   }
 
   &__submit {
@@ -548,6 +569,7 @@
 
     &:hover {
       background-color: rgb(255, 64, 98);
+      cursor: pointer;
     }
 
     &:active {
@@ -637,6 +659,10 @@
       &:hover + label {
         background-color: rgb(251, 78, 78);
       }
+    }
+
+    & .choices__inner {
+      border: 1px solid rgb(251, 78, 78);
     }
   }
 
