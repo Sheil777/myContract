@@ -55,17 +55,11 @@ document.addEventListener('DOMContentLoaded', () => {
   // Отдельно для 11 блока
   const mileageRadioButtons = document.querySelectorAll('input[name="payment-method"]');
   mileageRadioButtons.forEach(button => {
-    let mileageNo4 = document.querySelector('#payment-bank');
     let mileageNo5 = document.querySelector('#payment-transfer');
     let mileageNo6 = document.querySelector('#payment-transfer-on-check');
 
     button.addEventListener('change', () => {
-      if(mileageNo4.checked){
-        document.querySelectorAll('.tohide11').forEach(el => {el.classList.remove('hidden')});
-        document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('off')});
-        document.querySelector('.tohide11.bank').classList.remove('off');
-      }
-      else if(mileageNo5.checked){
+      if(mileageNo5.checked){
         document.querySelectorAll('.tohide11').forEach(el => {el.classList.remove('hidden')});
         document.querySelectorAll('.tohide11').forEach(el => {el.classList.add('off')});
         document.querySelector('.tohide11.transfer').classList.remove('off');
@@ -94,35 +88,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   // Скачивание файла
-  document.querySelector('.main__form').addEventListener("submit", function(event){
-    event.preventDefault();
+  // document.querySelector('.main__form').addEventListener("submit", function(event){
+  //   event.preventDefault();
     
-    let required = document.querySelectorAll('.field.required');
-    required.forEach(element => {
-      let input = element.querySelector('input');
-      if(input.value.trim() == "") {
-        element.classList.add('wrong');
-      }
-    });
+  //   let required = document.querySelectorAll('.field.required');
+  //   required.forEach(element => {
+  //     let input = element.querySelector('input');
+  //     if(input.value.trim() == "") {
+  //       element.classList.add('wrong');
+  //     }
+  //   });
 
-    let manyFieldRequired = document.querySelectorAll('.main__many-fields.required');
-    manyFieldRequired.forEach(element => {
-      let inputs = element.querySelectorAll('input');
-      for(let i = 0; i < inputs.length; i++){
-        let input = inputs[i];
-        if(input.value.trim() == "") {
-          element.classList.add('wrong');
-          break;
-        }
-      }
-    });
+  //   let manyFieldRequired = document.querySelectorAll('.main__many-fields.required');
+  //   manyFieldRequired.forEach(element => {
+  //     let inputs = element.querySelectorAll('input');
+  //     for(let i = 0; i < inputs.length; i++){
+  //       let input = inputs[i];
+  //       if(input.value.trim() == "") {
+  //         element.classList.add('wrong');
+  //         break;
+  //       }
+  //     }
+  //   });
 
-    let selectsRequired = document.querySelectorAll('.required_select');
-    selectsRequired.forEach(select => {
-      if(select.querySelector('select').value == "") {
-        select.classList.add('wrong');
-      }
-    })
-  });
+  //   let selectsRequired = document.querySelectorAll('.required_select');
+  //   selectsRequired.forEach(select => {
+  //     if(select.querySelector('select').value == "") {
+  //       select.classList.add('wrong');
+  //     }
+  //   })
+  // });
 
 });
