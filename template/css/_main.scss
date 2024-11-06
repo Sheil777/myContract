@@ -1442,6 +1442,187 @@
   }
 }
 
+// Вопрос-ответ
+.faq {
+  &__container {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    h1{
+      color: #3b3b3b;
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+
+      br {
+        display: none;
+      }
+
+      @media (max-width: 1330px) {
+        text-align: center;
+      }
+
+      @media (max-width: 570px) {
+        font-size: 26px;
+      }
+
+      @media (max-width: 440px) {
+        br {
+          display: block;
+        }
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 25px;
+
+    @media (max-width: 1330px) {
+      justify-content: center;
+    }
+  }
+
+  &__item {
+    flex: 0 1 640px;
+    border: 1px solid #d7d7d7;
+    background-color: white;
+    padding: 20px;
+    padding-left: 40px;
+    box-sizing: border-box;
+    position: relative;
+
+    @media (max-width: 1440px) {
+      flex: 0 1 590px;
+    }
+
+    @media (max-width: 1330px) {
+      flex: 0 1 700px;
+    }
+
+    @media (max-width: 800px) {
+      flex: 0 1 100%;
+    }
+
+    &::before {
+      position: absolute;
+      top: 22px;
+      left: -30px;
+      display: block;
+      content: "";
+      background-image: url(../images/icons/question.png);
+      height: 52px;
+      width: 52px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    dt {
+      color: #3b3b3b;
+      font-weight: 600;
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+
+    dd {
+      color: #3b3b3b;
+      font-style: italic;
+      line-height: 22px;
+      font-size: 16px;
+    }
+  }
+}
+
+
+// О нас
+
+.about {
+
+  &__container {
+    color: #3b3b3b;
+
+    h1 {
+      color: #3b3b3b;
+      font-size: 30px;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+  }
+
+  &__welcome {
+    margin-top: 15px;
+
+    a {
+      color: #4c48ff;
+    }
+  }
+
+  &__list {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: 800px) {
+      
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+    display: flex;
+    gap: 20px;
+    box-sizing: border-box;
+    padding: 20px;
+    
+    &.number1 {
+      border-right: 1px solid gray;
+      border-bottom: 1px solid gray;
+    }
+
+    &.number2 {
+      border-bottom: 1px solid gray;
+    }
+
+    &.number3 {
+      border-right: 1px solid gray;
+      
+    } 
+
+    &.number4 {
+    }
+
+    &:nth-child(odd){
+      padding-left: 0;
+    }
+
+    &:nth-child(even){
+      padding-right: 0;
+    }
+  }
+
+  &__number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #838383;
+  }
+
+  &__text {
+    text-align: justify;
+  }
+
+  &__end {
+  }
+}
+
+
+
+
+
+
+
 // Попап ошибки
 
 .popup-error {

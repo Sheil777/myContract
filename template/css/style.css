@@ -1357,6 +1357,146 @@ body.lock {
   background-color: rgb(76, 72, 255);
 }
 
+.faq__container {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.faq__container h1 {
+  color: #3b3b3b;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.faq__container h1 br {
+  display: none;
+}
+@media (max-width: 1330px) {
+  .faq__container h1 {
+    text-align: center;
+  }
+}
+@media (max-width: 570px) {
+  .faq__container h1 {
+    font-size: 26px;
+  }
+}
+@media (max-width: 440px) {
+  .faq__container h1 br {
+    display: block;
+  }
+}
+.faq__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  gap: 25px;
+}
+@media (max-width: 1330px) {
+  .faq__list {
+    justify-content: center;
+  }
+}
+.faq__item {
+  flex: 0 1 640px;
+  border: 1px solid #d7d7d7;
+  background-color: white;
+  padding: 20px;
+  padding-left: 40px;
+  box-sizing: border-box;
+  position: relative;
+}
+@media (max-width: 1440px) {
+  .faq__item {
+    flex: 0 1 590px;
+  }
+}
+@media (max-width: 1330px) {
+  .faq__item {
+    flex: 0 1 700px;
+  }
+}
+@media (max-width: 800px) {
+  .faq__item {
+    flex: 0 1 100%;
+  }
+}
+.faq__item::before {
+  position: absolute;
+  top: 22px;
+  left: -30px;
+  display: block;
+  content: "";
+  background-image: url(../images/icons/question.png);
+  height: 52px;
+  width: 52px;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.faq__item dt {
+  color: #3b3b3b;
+  font-weight: 600;
+  font-size: 18px;
+  padding-bottom: 10px;
+}
+.faq__item dd {
+  color: #3b3b3b;
+  font-style: italic;
+  line-height: 22px;
+  font-size: 16px;
+}
+
+.about__container {
+  color: #3b3b3b;
+}
+.about__container h1 {
+  color: #3b3b3b;
+  font-size: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+.about__welcome {
+  margin-top: 15px;
+}
+.about__welcome a {
+  color: #4c48ff;
+}
+.about__list {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.about__item {
+  flex: 0 1 50%;
+  display: flex;
+  gap: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+}
+.about__item.number1 {
+  border-right: 1px solid gray;
+  border-bottom: 1px solid gray;
+}
+.about__item.number2 {
+  border-bottom: 1px solid gray;
+}
+.about__item.number3 {
+  border-right: 1px solid gray;
+}
+.about__item:nth-child(odd) {
+  padding-left: 0;
+}
+.about__item:nth-child(even) {
+  padding-right: 0;
+}
+.about__number {
+  font-size: 40px;
+  font-weight: 700;
+  color: #838383;
+}
+.about__text {
+  text-align: justify;
+}
 .popup-error__content {
   padding: 20px 60px;
 }

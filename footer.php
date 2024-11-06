@@ -6,7 +6,7 @@
                     <ul class="footer-c__list">
                         <li class="footer-c__item">
                             <img src="./template/images/icons/phone.svg" alt="Иконка телефона">
-                            <a href="tel:+71234567890">+7 (903) 456 78-90</a>
+                            <a href="tel:+79034567890">+7 (903) 456 78-90</a>
                         </li>
                         <li class="footer-c__item">
                             <p>ИП Горбачев Борис Леонидович</p>
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 <ul class="footer__links">
-                    <li><a href="#">Договор оферты</a></li>
+                    <li><a href="./ofertadogovor.pdf">Договор оферты</a></li>
                     <li><a href="#">Тарифы</a></li>
                     <li><a href="#">Отписаться</a></li>
                 </ul>
