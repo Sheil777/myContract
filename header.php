@@ -30,7 +30,7 @@
 </head>
 <body>
     <div class="wrapper">
-        <header class="header _scroll-anim _scroll-anim-no-hide">
+        <header id="header" class="header _scroll-anim _scroll-anim-no-hide">
             <div class="header__container _container">
                 <a href="./index.php" class="header__logo">
                     мой-договор.рф

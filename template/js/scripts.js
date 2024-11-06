@@ -119,4 +119,16 @@ document.addEventListener('DOMContentLoaded', () => {
   //   })
   // });
 
+
+  // Кнопка "Оплатить и скачать"
+  document.querySelector('#payAndDownload').addEventListener('click', (event) => {
+      event.preventDefault();
+      if(document.querySelector('#agreement').checked){
+        popupError = document.querySelector('.popup-error');
+        popupOpen(popupError);
+        document.querySelector('#agreement').checked = false;
+      }else{
+        alert('Дайте свое согласие на обработку данных!');
+      }
+  })
 });

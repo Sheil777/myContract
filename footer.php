@@ -1,6 +1,6 @@
 <footer class="footer">
             <div class="footer__container _container">
-                <a href="#" class="footer__logo">мой-договор.рф</a>
+                <a href="#header" class="footer__logo">мой-договор.рф</a>
                 <div class="footer__contacts footer-c">
                     <div class="footer-c__header">Контакты:</div>
                     <ul class="footer-c__list">
@@ -21,7 +21,7 @@
                 </div>
                 <ul class="footer__links">
                     <li><a href="./ofertadogovor.pdf">Договор оферты</a></li>
-                    <li><a href="#">Тарифы</a></li>
+                    <li><a href="./tariffs.php">Тарифы</a></li>
                     <li><a href="#">Отписаться</a></li>
                 </ul>
             </div>
@@ -50,16 +50,23 @@
                                     <div class="price">5 ₽ублей</div>
                                     <!-- <div class="price-old">899 ₽</div> -->
                                 </div>
-                                <a href="#popup-error" class="email__submit popup-link">Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки"></a>
+                                <!-- <a href="#popup-error" id="payAndDownload" class="email__submit popup-link"> -->
+                                <a href="#" id="payAndDownload" class="email__submit">
+                                    Оплатить и скачать <img src="./template/images/icons/download.svg" alt="Иконка загрузки">
+                                </a>
                             </div>
                             <div class="popup-download__agreement">
                                 <input type="checkbox" id="agreement" name="agreement" />
                                 <label for="agreement">
-                                    <span>
-                                        Согласен с <a href="#">правилами обработки персональных данных</a>, <a href="">правилами пользования сервисом</a> и
+                                    <!-- <span>
+                                        Согласен с <a href="./agreement.pdf">правилами обработки персональных данных</a>, <a href="">правилами пользования сервисом</a> и
                                         получения чеков на внутреннюю почту сервиса. Платежи автоматические реккурентные.<br>
                                         Стоимость 5 руб за первые 5 дней, далее автоматическая оплата 399 рублей каждые 30 дней 
                                         согласно <a href="#">тарифам (Соглашение о подписке).</a>
+                                    </span> -->
+                                    <span>
+                                        Согласен с <a href="./agreement.pdf">правилами обработки персональных данных, договором оферты</a> и получением чеков на внутреннюю почту сервиса.
+                                        Платежи автоматические реккурентные. Стоимость 5 руб за первые 5 дней, далее автоматическая оплата 399 рублей каждые 30 дней согласно тарифам (<a href="./tariffs.php">Соглашение о подписке</a>).
                                     </span>
                                 </label>
                             </div>
@@ -84,6 +91,7 @@
     <script src="template/js/jquery.maskedinput.min.js"></script>
     <script src="template/js/choices.min.js"></script>
     <script src="template/js/scroll-anim.js"></script>
+    <script src="template/js/scroll.js"></script>
     <script src="template/js/popups.js"></script>
     <script src="template/js/scripts.js"></script>
 </body>
