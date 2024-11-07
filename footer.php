@@ -86,6 +86,27 @@
                 </div>
             </div>
         </div>
+
+        <div id="popup-authorization" class="popup popup-authorization">
+            <div class="popup__body popup-authorization__body">
+                <div class="popup__content popup-authorization__content">
+                    <div class="popup-close popup-authorization__close"></div>
+                    <div class="popup-authorization__header">Вход</div>
+                    <form action="#" class="popup-authorization__form">
+                        <div class="popup-authorization__login">
+                            <label for="">E-mail</label>
+                            <input type="text" placeholder="E-mail">
+                        </div>
+                        <div class="popup-authorization__password">
+                            <label for="">Пароль</label>
+                            <input type="password" placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="popup-authorization__button">Войти</button>
+                    </form>
+                    <a href="#" class="popup-authorization__forgot">Забыли пароль?</a>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="template/js/jquery-3.6.0.min.js"></script>
     <script src="template/js/jquery.maskedinput.min.js"></script>
