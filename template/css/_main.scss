@@ -1830,7 +1830,7 @@
       border: 1px solid lightgray;
       height: 28px;
       width: 230px;
-      font-size: 16px;
+      font-size: 15px;
       padding: 10px;
       box-sizing: border-box;
       margin-top: 8px;
@@ -1861,12 +1861,13 @@
     border-radius: 6px;
 
     transition: all 0.3s;
-    border: 1px solid rgb(36, 132, 251);
-    box-sizing: border-box;
+    // border: 1px solid rgb(36, 132, 251);
+    // box-sizing: border-box;
 
     &:hover {
-      background-color: white;
-      color: rgb(36, 132, 251);
+      // background-color: white;
+      // color: rgb(36, 132, 251);
+      background-color: rgb(7, 95, 201); 
     }
   }
 
