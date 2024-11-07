@@ -44,8 +44,8 @@
                         <div class="popup-download__right right">
                             <div class="popup-download__offer">
                                 <img class="popup-download__img-block" src="./template/images/present.png" alt="Картинка подарка">
-                                <div class="right__header">Акция</div>
-                                <div class="right__promo">Первый договор всего за</div>
+                                <div class="right__header">Договор готов</div>
+                                <div class="right__promo">Для продолжения оплатите:</div>
                                 <div class="right__price">
                                     <div class="price">5 ₽ублей</div>
                                     <!-- <div class="price-old">899 ₽</div> -->
@@ -58,12 +58,6 @@
                             <div class="popup-download__agreement">
                                 <input type="checkbox" id="agreement" name="agreement" />
                                 <label for="agreement">
-                                    <!-- <span>
-                                        Согласен с <a href="./agreement.pdf">правилами обработки персональных данных</a>, <a href="">правилами пользования сервисом</a> и
-                                        получения чеков на внутреннюю почту сервиса. Платежи автоматические реккурентные.<br>
-                                        Стоимость 5 руб за первые 5 дней, далее автоматическая оплата 399 рублей каждые 30 дней 
-                                        согласно <a href="#">тарифам (Соглашение о подписке).</a>
-                                    </span> -->
                                     <span>
                                         Согласен с <a href="./agreement.pdf">правилами обработки персональных данных, договором оферты</a> и получением чеков на внутреннюю почту сервиса.
                                         Платежи автоматические реккурентные. Стоимость 5 руб за первые 5 дней, далее автоматическая оплата 399 рублей каждые 30 дней согласно тарифам (<a href="./tariffs.php">Соглашение о подписке</a>).
